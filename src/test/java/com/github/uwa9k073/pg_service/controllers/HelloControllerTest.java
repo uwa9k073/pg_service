@@ -20,10 +20,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers
 public class HelloControllerTest {
 
-
-  @Autowired
-  ConfTest config;
-
   @LocalServerPort
   private Integer port;
 
@@ -33,9 +29,9 @@ public class HelloControllerTest {
   @Test
   void controlHello() throws Exception {
     mockMvc.perform(get("/v1/hello?name=a")).andExpectAll(
-            status().isOk(),
-            content().string("Hello, a!")
-        );
+        status().isOk(),
+        content().string("Hello, a!")
+    );
     mockMvc.perform(get("/v1/hello?name=a")).andExpectAll(
         status().isOk(),
         content().string("Hello again, a!")
