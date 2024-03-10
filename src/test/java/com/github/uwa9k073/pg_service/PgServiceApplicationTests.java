@@ -13,7 +13,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers
 class PgServiceApplicationTests {
 
-  private static String contextLoadsMessage = "%s component not found in context";
+  private static final String contextLoadsMessage = "%s component not found in context";
 
   @Autowired
   private HelloController controller;
